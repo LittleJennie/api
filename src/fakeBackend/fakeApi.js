@@ -3,8 +3,7 @@ const borrower = {
   lastName: '',
 };
 
-export function onSubmit(url, axiosOptions) {
-  const options = { ...axiosOptions, ...{ method: "get" }, ...{ url } };
+export function onSubmit(options) {
   console.log('*** options: ', options)
   borrower.firstName = options.firstName;
   borrower.lastName = options.lastName;
